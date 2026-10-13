@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A student-friendly information hub for Manicaland State University of Applied Sciences services.">
+  <meta name="theme-color" content="#123b45">
+  <title>MSUAS Student Services Portal</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js" defer></script>
+  <script src="p5/campus-network.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="MSUAS Student Services Portal home">
+      <span class="brand-mark" aria-hidden="true">MSU</span>
+      <span>Student Services Portal</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="primaryNav">Menu ☰</button>
+    <nav id="primaryNav" class="primary-nav" aria-label="Main navigation">
+      <a href="#home">Home</a><a href="#services">Services</a><a href="#campus-hub">Campus Hub</a><a href="#contact">Contact</a>
+      <a href="https://web.msuas.ac.zw/" target="_blank" rel="noopener noreferrer">MSUAS Website ↗</a>
+    </nav>
+  </header>
+
+  <main id="main" class="page-shell">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">MANICALAND STATE UNIVERSITY OF APPLIED SCIENCES</p>
+        <h1 id="hero-title">Your student services, all in one place.</h1>
+        <p class="hero-intro">Find practical guidance for learning, health, finance and campus life—without having to search through multiple pages.</p>
+        <div class="hero-actions">
+          <a class="button button-gold" href="#services">Explore services <span aria-hidden="true">↓</span></a>
+          <button class="button button-light" id="openLoginBtn" type="button">Open e-Learning ↗</button>
+        </div>
+        <p class="hero-note">Student-focused information • Responsive design • Official-source references</p>
+      </div>
+      <div class="hero-image" role="img" aria-label="Official MSUAS Health Services building at Fernhill campus"></div>
+    </section>
+
+    <section class="quick-links" aria-label="Quick access">
+      <a class="quick-card" href="#services" data-category="academic"><span class="quick-icon" aria-hidden="true">▦</span><span><strong>Academic support</strong><small>Library and learning</small></span><span class="arrow">↗</span></a>
+      <a class="quick-card" href="#services" data-category="finance"><span class="quick-icon" aria-hidden="true">◈</span><span><strong>Fees & finance</strong><small>Payment guidance</small></span><span class="arrow">↗</span></a>
+      <a class="quick-card" href="#services" data-category="wellbeing"><span class="quick-icon" aria-hidden="true">✚</span><span><strong>Wellbeing</strong><small>Health and support</small></span><span class="arrow">↗</span></a>
+      <a class="quick-card" href="#contact"><span class="quick-icon" aria-hidden="true">✉</span><span><strong>Contact office</strong><small>Prepare an enquiry</small></span><span class="arrow">↗</span></a>
+    </section>
+
+    <div class="content-layout">
+      <div class="main-column">
+        <section id="services" class="panel services-panel" aria-labelledby="services-title">
+          <div class="section-heading">
+            <div><p class="eyebrow dark-eyebrow">FIND WHAT YOU NEED</p><h2 id="services-title">Explore student services</h2><p class="muted">Search or filter to see service information and next steps.</p></div>
+            <span class="result-count" id="resultCount" aria-live="polite">7 services</span>
+          </div>
+          <div class="service-controls">
+            <label class="search-wrap"><span class="visually-hidden">Search services</span><span aria-hidden="true">⌕</span><input id="serviceSearch" type="search" placeholder="Search services, topics or keywords…" autocomplete="off"></label>
+            <label class="visually-hidden" for="categoryFilter">Filter services by category</label>
+            <select id="categoryFilter">
+              <option value="all">All categories</option><option value="academic">Academic</option><option value="wellbeing">Health & wellbeing</option><option value="finance">Finance</option><option value="student-life">Student life</option><option value="admissions">Admissions</option>
+            </select>
+          </div>
+          <div class="service-grid" id="serviceGrid">
+            <article class="service-card" data-category="wellbeing" data-search="health clinic medical counselling referral medication student id medical aid">
+              <div class="service-top"><span class="service-icon" aria-hidden="true">✚</span><span class="tag tag-green">Wellbeing</span></div>
+              <h3>Health Services</h3><p>Primary healthcare, outpatient support, health information, counselling and referrals for students.</p>
+              <div class="detail-line"><strong>Published clinic hours</strong><span>Mon–Thu 08:00–16:45 · Fri 08:00–16:15</span></div>
+              <p class="small-note">The official page asks students to bring a valid student ID and medical-aid card where applicable.</p>
+              <button class="text-button details-toggle" aria-expanded="false">View service details <span aria-hidden="true">＋</span></button>
+              <div class="extra-details" hidden><p><strong>Contact:</strong> Clinic extension 3214; mobile number listed on the official page: 077 324 6928.</p><p><strong>Location:</strong> Stair Guthrie Road, P. Bag 7001, Fernhill, Mutare.</p><a href="https://msuas.ac.zw/health-services/" target="_blank" rel="noopener noreferrer">Verify health information on the official site ↗</a></div>
+            </article>
+            <article class="service-card" data-category="academic" data-search="library books ebooks journals research citation past exam papers borrowing renewal study rooms">
+              <div class="service-top"><span class="service-icon" aria-hidden="true">▤</span><span class="tag">Academic</span></div>
+              <h3>Library & Research</h3><p>Find print and electronic resources, research support, citation guidance, information-literacy training and study spaces.</p>
+              <div class="detail-line"><strong>Student borrowing</strong><span>Up to 3 open-shelf books for 7 days</span></div>
+              <p class="small-note">The official library page describes e-books, e-journals, the catalogue, repository and past examination papers.</p>
+              <button class="text-button details-toggle" aria-expanded="false">View service details <span aria-hidden="true">＋</span></button>
+              <div class="extra-details" hidden><p><strong>Research support:</strong> Trymore Museke — trymore.museke@msuas.ac.zw.</p><p><strong>Client services:</strong> Priscah Maruka — priscah.maruka@staff.msuas.ac.zw.</p><p>Published student borrowing information says the loan period is 7 days and overdue books attract a fine. Confirm current terms with the library.</p><a href="https://library.msuas.ac.zw/our-services/" target="_blank" rel="noopener noreferrer">Explore official library services ↗</a> · <a href="https://library.msuas.ac.zw/services/borrow-reserve-renew/" target="_blank" rel="noopener noreferrer">Borrowing guidance ↗</a></div>
+            </article>
+            <article class="service-card" data-category="finance" data-search="bursar fees payment student accounts finance fee ordinance bank paynow">
+              <div class="service-top"><span class="service-icon" aria-hidden="true">◈</span><span class="tag tag-gold">Finance</span></div>
+              <h3>Bursar & Student Fees</h3><p>Review the university's published fee guidance and payment channels before making a payment.</p>
+              <div class="detail-line"><strong>Fee information</strong><span>2026 fee ordinance published online</span></div>
+              <p class="small-note">Payment details can change. Always confirm the current amount, currency and account with the official university before transferring money.</p>
+              <button class="text-button details-toggle" aria-expanded="false">View service details <span aria-hidden="true">＋</span></button>
+              <div class="extra-details" hidden><p>The official Bursar page provides departmental information. The fees page lists payment methods and fee schedules; this portal intentionally does not treat bank details as permanent.</p><a href="https://web.msuas.ac.zw/bursars-department/" target="_blank" rel="noopener noreferrer">Bursar's Department ↗</a> · <a href="https://web.msuas.ac.zw/fees/" target="_blank" rel="noopener noreferrer">Fees and how to pay ↗</a></div>
+            </article>
+            <article class="service-card" data-category="admissions" data-search="admissions applications apply programmes undergraduate postgraduate short courses documents">
+              <div class="service-top"><span class="service-icon" aria-hidden="true">▣</span><span class="tag">Admissions</span></div>
+              <h3>Admissions & Applications</h3><p>Learn about programmes, application forms, supporting documents and the official admissions contact.</p>
+              <div class="detail-line"><strong>Official contact</strong><span>admissions@msuas.ac.zw</span></div>
+              <p class="small-note">The official admissions page describes online and hard-copy application options and warns against unauthorised third-party form sellers.</p>
+              <button class="text-button details-toggle" aria-expanded="false">View service details <span aria-hidden="true">＋</span></button>
+              <div class="extra-details" hidden><p>Application requirements and fees may depend on the intake and applicant type. Check the current notice before submitting documents or paying an application fee.</p><a href="https://web.msuas.ac.zw/admissions/" target="_blank" rel="noopener noreferrer">Official admissions guidance ↗</a> · <a href="https://web.msuas.ac.zw/" target="_blank" rel="noopener noreferrer">Programmes and university notices ↗</a></div>
+            </article>
+            <article class="service-card" data-category="academic" data-search="elearning student portal email digital learning online courses login">
+              <div class="service-top"><span class="service-icon" aria-hidden="true">⌘</span><span class="tag">Digital learning</span></div>
+              <h3>e-Learning & Student Portals</h3><p>Find the university's online learning entry point and portal options for student services.</p>
+              <div class="detail-line"><strong>Portal options</strong><span>Student portal · Email · Library</span></div>
+              <p class="small-note">Sign-in access and account credentials are managed by the university, not this prototype.</p>
+              <button class="text-button details-toggle" aria-expanded="false">View service details <span aria-hidden="true">＋</span></button>
+              <div class="extra-details" hidden><p>Use your university-issued credentials. If you cannot sign in, contact the appropriate university support office; never share your password in this portal.</p><button class="text-button open-card-login" type="button" style="color:var(--teal);font-weight:bold;margin-top:8px;">Open Student Portal Login Demo ↗</button></div>
+            </article>
+            <article class="service-card" data-category="student-life" data-search="student affairs accommodation residence clubs sports recreation student development counselling">
+              <div class="service-top"><span class="service-icon" aria-hidden="true">⌂</span><span class="tag tag-green">Student life</span></div>
+              <h3>Student Affairs & Campus Life</h3><p>Use the university's notices and student-affairs resources to look for student development, clubs and campus-life updates.</p>
+              <div class="detail-line"><strong>Useful resource</strong><span>Student affairs plan and SRC constitution</span></div>
+              <p class="small-note">Current residence availability, allocation rules and counselling arrangements should be confirmed directly with the university.</p>
+              <button class="text-button details-toggle" aria-expanded="false">View service details <span aria-hidden="true">＋</span></button>
+              <div class="extra-details" hidden><p>The university downloads page publishes student-affairs documents, including a student affairs plan and SRC constitution. Specific accommodation and activity details can vary by semester.</p><a href="https://web.msuas.ac.zw/downloads/" target="_blank" rel="noopener noreferrer">Official downloads and student-affairs documents ↗</a> · <a href="https://web.msuas.ac.zw/" target="_blank" rel="noopener noreferrer">University announcements ↗</a></div>
+            </article>
+            <article class="service-card" data-category="wellbeing" data-search="counselling mental health stress relationships wellbeing support health clinic confidential">
+              <div class="service-top"><span class="service-icon" aria-hidden="true">♡</span><span class="tag tag-green">Wellbeing</span></div>
+              <h3>Personal Support & Counselling</h3><p>Start with the university health-services information for counselling-related support and referral guidance.</p>
+              <div class="detail-line"><strong>Confidentiality</strong><span>Discuss sensitive matters with authorised staff</span></div>
+              <p class="small-note">A separate, current counselling-office contact was not verified during research. The portal does not invent one.</p>
+              <button class="text-button details-toggle" aria-expanded="false">View service details <span aria-hidden="true">＋</span></button>
+              <div class="extra-details" hidden><p>The official health page mentions individual counselling on topics including stress management, relationships and substance-related concerns. Contact the clinic to confirm available services and referral arrangements.</p><a href="https://msuas.ac.zw/health-services/" target="_blank" rel="noopener noreferrer">Official health and counselling information ↗</a></div>
+            </article>
+          </div>
+          <p id="noResults" class="empty-state" hidden>No services match your search. Try a different keyword or choose “All categories”.</p>
+        </section>
+
+        <section id="campus-hub" class="panel campus-panel" aria-labelledby="campus-title">
+          <div class="section-heading"><div><p class="eyebrow dark-eyebrow">INTERACTIVE VISUAL</p><h2 id="campus-title">Campus services network</h2><p class="muted">Select a node to highlight a service area. This p5.js sketch is illustrative, not a geographic campus map.</p></div></div>
+          <div id="p5-canvas" class="p5-canvas" aria-label="Interactive diagram connecting student services"></div>
+          <div id="networkStatus" class="network-status" aria-live="polite">Choose a node in the visual to learn how service areas connect.</div>
+          <div class="network-legend"><span><i class="legend-dot gold"></i> Academic</span><span><i class="legend-dot teal"></i> Wellbeing</span><span><i class="legend-dot coral"></i> Administration</span></div>
+        </section>
+
+        <section id="contact" class="panel contact-panel" aria-labelledby="contact-title">
+          <div class="section-heading"><div><p class="eyebrow dark-eyebrow">NEED MORE HELP?</p><h2 id="contact-title">Prepare an enquiry</h2><p class="muted">Complete the form to prepare an email to the relevant official office.</p></div></div>
+          <form id="contactForm">
+            <div class="form-grid">
+              <div class="field"><label for="fullName">Full name</label><input id="fullName" name="fullName" autocomplete="name" required minlength="2" placeholder="Enter your full name"></div>
+              <div class="field"><label for="email">Your email</label><input id="email" name="email" type="email" autocomplete="email" required placeholder="name@example.com"></div>
+              <div class="field field-full"><label for="office">Office / topic</label><select id="office" name="office" required><option value="">Select an office…</option><option value="Health Services">Health Services</option><option value="Library">Library</option><option value="Bursar / Student Fees">Bursar / Student Fees</option><option value="Admissions">Admissions</option><option value="e-Learning / Student Portal">e-Learning / Student Portal</option><option value="Student Affairs">Student Affairs</option><option value="General enquiry">General enquiry</option></select></div>
+              <div class="field field-full"><label for="message">Message</label><textarea id="message" name="message" rows="5" required minlength="10" placeholder="Briefly describe how the office can help (do not include passwords or sensitive personal details)."></textarea></div>
+            </div>
+            <div class="form-actions"><button class="button button-primary" type="submit">Prepare email ↗</button><button class="button button-outline" type="reset">Clear form</button></div>
+            <p id="formFeedback" class="form-feedback" role="status" aria-live="polite"></p>
+            <p class="small-note">Prototype note: this form opens your device's email application; it does not send or store messages on a server.</p>
+          </form>
+        </section>
+      </div>
+
+      <aside class="sidebar panel" aria-labelledby="sidebar-title">
+        <div class="sidebar-heading"><p class="eyebrow dark-eyebrow">STUDENT QUICK FIND</p><h2 id="sidebar-title">Service directory</h2><p class="muted">Jump straight to a topic.</p></div>
+        <label class="search-wrap sidebar-search"><span aria-hidden="true">⌕</span><span class="visually-hidden">Search directory</span><input id="sidebarSearch" type="search" placeholder="Search services…"></label>
+        <div class="directory-list">
+          <button class="directory-item" data-target="Health Services"><span class="directory-icon">✚</span><span><strong>Health Services</strong><small>Clinic and wellbeing</small></span><span>↗</span></button>
+          <button class="directory-item" data-target="Library & Research"><span class="directory-icon">▤</span><span><strong>Library & Research</strong><small>Books and research support</small></span><span>↗</span></button>
+          <button class="directory-item" data-target="Bursar & Student Fees"><span class="directory-icon">◈</span><span><strong>Bursar & Fees</strong><small>Payment guidance</small></span><span>↗</span></button>
+          <button class="directory-item" data-target="Admissions & Applications"><span class="directory-icon">▣</span><span><strong>Admissions</strong><small>Applications and programmes</small></span><span>↗</span></button>
+          <button class="directory-item" data-target="e-Learning & Student Portals"><span class="directory-icon">⌘</span><span><strong>Student Portals</strong><small>Digital learning access</small></span><span>↗</span></button>
+          <button class="directory-item" data-target="Student Affairs & Campus Life"><span class="directory-icon">⌂</span><span><strong>Student Affairs</strong><small>Campus life resources</small></span><span>↗</span></button>
+          <button class="directory-item" data-target="Personal Support & Counselling"><span class="directory-icon">♡</span><span><strong>Personal Support</strong><small>Counselling guidance</small></span><span>↗</span></button>
+        </div>
+        <div class="official-contact"><h3>Official university contact</h3><p>Stair Guthrie Road, P. Bag 7001, Fernhill, Mutare, Zimbabwe.</p><p><strong>Telephone:</strong> +263 20 63456</p><p><strong>Email:</strong> pr@msuas.ac.zw</p><a href="https://web.msuas.ac.zw/" target="_blank" rel="noopener noreferrer">Visit official website ↗</a></div>
+        <div class="source-note"><strong>Information note</strong><p>Service summaries are based on publicly available official pages checked for this student prototype. Always verify changing hours, fees, contacts and policies with MSUAS.</p></div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Prototype Student Portal Modal -->
+  <div id="loginModal" class="login-modal-overlay" hidden>
+    <div class="login-modal-card" role="dialog" aria-labelledby="modalTitle" aria-modal="true">
+      <button class="modal-close" id="closeLoginModal" aria-label="Close modal">×</button>
+      <div class="modal-header">
+        <span class="brand-mark">MSU</span>
+        <h2 id="modalTitle">Student Portal Login</h2>
+        <p class="muted">Enter your university credentials to sign in.</p>
+      </div>
+      <form id="fakeLoginForm">
+        <div class="field">
+          <label for="regNumber">Registration / Username</label>
+          <input id="regNumber" type="text" placeholder="e.g. R201384R" required>
+        </div>
+        <div class="field" style="margin-top: 12px;">
+          <label for="regPassword">Password</label>
+          <input id="regPassword" type="password" placeholder="••••••••" required>
+        </div>
+        <div class="modal-actions" style="margin-top: 18px;">
+          <button class="button button-primary" type="submit" style="width:100%;">Sign In</button>
+        </div>
+        <p id="loginFeedback" class="form-feedback" style="margin-top:12px; text-align:center;"></p>
+      </form>
+    </div>
+  </div>
+
+  <footer class="site-footer"><div><span class="footer-mark">MSUAS</span><span>Student Services Portal</span></div><p>DSI236 practical prototype · Built for student information access</p><p>Independent academic prototype—not an official university system.</p><a href="#home">Back to top ↑</a></footer>
+</body>
+</html>

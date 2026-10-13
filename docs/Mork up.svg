@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" width="100%" height="100%" style="background-color: #f8fbfa; font-family: 'DM Sans', Arial, sans-serif;">
+  <defs>
+    <style>
+      .wire-border { stroke: #dbe4e4; stroke-width: 2; fill: #ffffff; }
+      .header-bg { fill: #102f37; }
+      .hero-bg { fill: #153943; rx: 8; }
+      .card-bg { fill: #ffffff; stroke: #dbe4e4; stroke-width: 1.5; rx: 6; }
+      .accent-gold { fill: #e4ad35; }
+      .accent-teal { fill: #176b68; }
+      .text-wh { fill: #ffffff; font-size: 11px; }
+      .text-dk { fill: #24363a; font-size: 11px; }
+      .text-muted { fill: #6c7a7e; font-size: 9px; }
+      .tag-green { fill: #e8f4f1; stroke: #176b68; stroke-width: 1; rx: 10; }
+    </style>
+  </defs>
+
+  <!-- Outer Browser Frame -->
+  <rect x="10" y="10" width="980" height="680" rx="12" class="wire-border" />
+  
+  <!-- Browser Header Bar -->
+  <path d="M 10 22 C 10 15, 15 10, 22 10 L 978 10 C 985 10, 990 15, 990 22 L 990 40 L 10 40 Z" fill="#e2e8e8" />
+  <circle cx="30" cy="25" r="5" fill="#ff5f56" />
+  <circle cx="45" cy="25" r="5" fill="#ffbd2e" />
+  <circle cx="60" cy="25" r="5" fill="#27c93f" />
+  <rect x="90" y="17" width="880" height="16" rx="8" fill="#ffffff" />
+  <text x="100" y="29" font-size="9" fill="#6c7a7e">https://studentportal.msuas.ac.zw</text>
+
+  <!-- Site Header Navigation -->
+  <rect x="10" y="40" width="980" height="45" class="header-bg" />
+  <rect x="30" y="52" width="40" height="20" rx="4" class="accent-gold" />
+  <text x="50" y="66" font-size="11" font-weight="800" fill="#102f37" text-anchor="middle">MSU</text>
+  <text x="80" y="66" font-size="13" font-weight="700" fill="#ffffff">Student Services Portal</text>
+  
+  <text x="700" y="66" class="text-wh">Home</text>
+  <text x="750" y="66" class="text-wh">Services</text>
+  <text x="810" y="66" class="text-wh">Campus Hub</text>
+  <text x="890" y="66" class="text-wh">Contact</text>
+
+  <!-- Hero Section -->
+  <rect x="30" y="100" width="940" height="110" class="hero-bg" />
+  <text x="50" y="125" font-size="9" font-weight="700" fill="#f2c55f">MANICALAND STATE UNIVERSITY OF APPLIED SCIENCES</text>
+  <text x="50" y="150" font-size="18" font-weight="800" fill="#ffffff">Your student services, all in one place.</text>
+  <text x="50" y="170" class="text-wh">Find practical guidance for learning, health, finance and campus life.</text>
+  
+  <rect x="50" y="180" width="100" height="22" rx="4" class="accent-gold" />
+  <text x="100" y="195" font-size="10" font-weight="700" fill="#102f37" text-anchor="middle">Explore Services</text>
+  <rect x="160" y="180" width="100" height="22" rx="4" fill="#ffffff" />
+  <text x="210" y="195" font-size="10" font-weight="700" fill="#153943" text-anchor="middle">Open e-Learning ↗</text>
+
+  <!-- Quick Access Link Bar -->
+  <rect x="30" y="225" width="220" height="40" class="card-bg" />
+  <text x="40" y="248" class="text-dk" font-weight="700">Academic support</text>
+
+  <rect x="270" y="225" width="220" height="40" class="card-bg" />
+  <text x="280" y="248" class="text-dk" font-weight="700">Fees &amp; finance</text>
+
+  <rect x="510" y="225" width="220" height="40" class="card-bg" />
+  <text x="520" y="248" class="text-dk" font-weight="700">Wellbeing</text>
+
+  <rect x="750" y="225" width="220" height="40" class="card-bg" />
+  <text x="760" y="248" class="text-dk" font-weight="700">Contact office</text>
+
+  <!-- Two-Column Layout -->
+  <rect x="30" y="280" width="650" height="380" class="card-bg" />
+  <text x="50" y="305" font-size="14" font-weight="700" fill="#153943">Explore Student Services</text>
+  
+  <rect x="50" y="315" width="380" height="25" rx="12" fill="#ffffff" stroke="#cbd8d8" />
+  <text x="65" y="331" class="text-muted">Search services, topics or keywords…</text>
+  <rect x="440" y="315" width="120" height="25" rx="4" fill="#ffffff" stroke="#cbd8d8" />
+  <text x="450" y="331" class="text-dk">All categories ▼</text>
+
+  <!-- Cards -->
+  <rect x="50" y="350" width="290" height="110" class="card-bg" />
+  <rect x="260" y="360" width="70" height="16" class="tag-green" />
+  <text x="295" y="372" font-size="8" font-weight="700" fill="#176b68" text-anchor="middle">Wellbeing</text>
+  <text x="65" y="375" font-size="12" font-weight="700" fill="#153943">Health Services</text>
+  <text x="65" y="395" class="text-muted">Primary healthcare, outpatient support</text>
+  <text x="65" y="410" class="text-muted">and counselling referrals.</text>
+  <line x1="65" y1="425" x2="325" y2="425" stroke="#edf1f1" />
+  <text x="65" y="442" font-size="9" font-weight="700" fill="#176b68">View service details ＋</text>
+
+  <rect x="360" y="350" width="290" height="110" class="card-bg" />
+  <rect x="570" y="360" width="70" height="16" class="tag-green" />
+  <text x="605" y="372" font-size="8" font-weight="700" fill="#176b68" text-anchor="middle">Academic</text>
+  <text x="375" y="375" font-size="12" font-weight="700" fill="#153943">Library &amp; Research</text>
+  <text x="375" y="395" class="text-muted">Print and electronic resources, e-journals</text>
+  <text x="375" y="410" class="text-muted">and quiet study spaces.</text>
+  <line x1="375" y1="425" x2="635" y2="425" stroke="#edf1f1" />
+  <text x="375" y="442" font-size="9" font-weight="700" fill="#176b68">View service details ＋</text>
+
+  <!-- Sidebar -->
+  <rect x="700" y="280" width="270" height="380" class="card-bg" />
+  <text x="715" y="305" font-size="14" font-weight="700" fill="#153943">Service Directory</text>
+  <rect x="715" y="315" width="240" height="25" rx="4" fill="#ffffff" stroke="#cbd8d8" />
+  <text x="725" y="331" class="text-muted">Search directory…</text>
+
+  <rect x="715" y="350" width="240" height="35" rx="4" fill="#f8fbfa" stroke="#dbe4e4" />
+  <text x="725" y="371" class="text-dk" font-weight="700">Health Services</text>
+
+  <rect x="715" y="395" width="240" height="35" rx="4" fill="#f8fbfa" stroke="#dbe4e4" />
+  <text x="725" y="416" class="text-dk" font-weight="700">Library &amp; Research</text>
+
+  <rect x="715" y="535" width="240" height="110" rx="6" fill="#fff6df" stroke="#e4ad35" />
+  <text x="725" y="555" font-size="11" font-weight="700" fill="#72500a">Official University Contact</text>
+  <text x="725" y="575" font-size="9" fill="#786b4e">Fernhill, Mutare, Zimbabwe</text>
+  <text x="725" y="590" font-size="9" fill="#786b4e">Tel: +263 20 63456</text>
+  <text x="725" y="605" font-size="9" fill="#786b4e">Email: pr@msuas.ac.zw</text>
+</svg>

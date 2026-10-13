@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 650" width="100%" height="100%" style="background-color: #f2f6f5; font-family: 'DM Sans', Arial, sans-serif;">
+  <defs>
+    <style>
+      .title { font-size: 22px; font-weight: 800; fill: #102f37; }
+      .subtitle { font-size: 13px; fill: #6c7a7e; }
+      .box-header { fill: #153943; stroke: #102f37; stroke-width: 2; rx: 8; }
+      .box-node { fill: #ffffff; stroke: #176b68; stroke-width: 2; rx: 8; }
+      .box-child { fill: #fff6df; stroke: #e4ad35; stroke-width: 1.5; rx: 6; }
+      .box-shared { fill: #e8f4f1; stroke: #176b68; stroke-width: 1.5; stroke-dasharray: 4 4; rx: 8; }
+      .text-light { fill: #ffffff; font-size: 13px; font-weight: 700; text-anchor: middle; }
+      .text-dark { fill: #153943; font-size: 13px; font-weight: 700; text-anchor: middle; }
+      .text-sub { fill: #6c7a7e; font-size: 11px; text-anchor: middle; }
+      .line { stroke: #176b68; stroke-width: 2; fill: none; }
+      .arrow { fill: #176b68; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" class="arrow" />
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="500" y="40" class="title" text-anchor="middle">MSUAS Student Services Portal — Sitemap &amp; User Flow</text>
+  <text x="500" y="62" class="subtitle" text-anchor="middle">Architecture and primary navigation flow for public &amp; authenticated views</text>
+
+  <!-- Root: Home / Public Portal -->
+  <rect x="360" y="90" width="280" height="60" class="box-header" />
+  <text x="500" y="116" class="text-light">1. Public Entry / Landing Page</text>
+  <text x="500" y="134" class="text-light" style="font-weight:400; font-size:11px;">Hero Banner • Quick Access Links • Service Cards</text>
+
+  <!-- Branch Lines from Root -->
+  <path d="M 500 150 L 500 190" class="line" />
+  <path d="M 170 190 L 830 190" class="line" />
+  <path d="M 170 190 L 170 220" class="line" marker-end="url(#arrowhead)" />
+  <path d="M 500 190 L 500 220" class="line" marker-end="url(#arrowhead)" />
+  <path d="M 830 190 L 830 220" class="line" marker-end="url(#arrowhead)" />
+
+  <!-- Node 1: Service Search & Directory -->
+  <rect x="50" y="220" width="240" height="55" class="box-node" />
+  <text x="170" y="244" class="text-dark">2. Service Directory</text>
+  <text x="170" y="260" class="text-sub">Search • Category Filter • Card Toggles</text>
+
+  <!-- Node 2: Authentication / Portal Login -->
+  <rect x="380" y="220" width="240" height="55" class="box-node" style="stroke:#e4ad35; fill:#fff6df;" />
+  <text x="500" y="244" class="text-dark">3. e-Learning Portal Login</text>
+  <text x="500" y="260" class="text-sub">Reg No (R201384R) &amp; Pass Verification</text>
+
+  <!-- Node 3: Contact & Enquiries -->
+  <rect x="710" y="220" width="240" height="55" class="box-node" />
+  <text x="830" y="244" class="text-dark">4. Contact &amp; Enquiry Office</text>
+  <text x="830" y="260" class="text-sub">Validated Form • mailto Draft Generator</text>
+
+  <!-- Flow to Sub-level / Dashboard -->
+  <path d="M 500 275 L 500 320" class="line" marker-end="url(#arrowhead)" />
+
+  <!-- Authenticated Level 2.2 Dashboard -->
+  <rect x="250" y="325" width="500" height="65" class="box-header" style="fill:#176b68; stroke:#102f37;" />
+  <text x="500" y="352" class="text-light">5. Authenticated Student Dashboard (Level 2.2)</text>
+  <text x="500" y="372" class="text-light" style="font-weight:400; font-size:11px;">Personalized Header • Module Schedules • Exam Timetable • Results History</text>
+
+  <!-- Dashboard Branches -->
+  <path d="M 500 390 L 500 430" class="line" />
+  <path d="M 180 430 L 820 430" class="line" />
+  <path d="M 180 430 L 180 460" class="line" marker-end="url(#arrowhead)" />
+  <path d="M 500 430 L 500 460" class="line" marker-end="url(#arrowhead)" />
+  <path d="M 820 430 L 820 460" class="line" marker-end="url(#arrowhead)" />
+
+  <!-- Dashboard Children -->
+  <rect x="80" y="460" width="200" height="50" class="box-child" />
+  <text x="180" y="482" class="text-dark">Current Semester (L2.2)</text>
+  <text x="180" y="497" class="text-sub">4 Modules &amp; Weekly Schedules</text>
+
+  <rect x="400" y="460" width="200" height="50" class="box-child" />
+  <text x="500" y="482" class="text-dark">Results History</text>
+  <text x="500" y="497" class="text-sub">L1.1, L1.2 &amp; L2.1 Transcripts</text>
+
+  <rect x="720" y="460" width="200" height="50" class="box-child" />
+  <text x="820" y="482" class="text-dark">Exam Timetable</text>
+  <text x="820" y="497" class="text-sub">Dates, Times &amp; Venue Locations</text>
+
+  <!-- Shared Global Bar -->
+  <rect x="50" y="550" width="900" height="55" class="box-shared" />
+  <text x="500" y="573" class="text-dark">Shared System Features &amp; Accessibility</text>
+  <text x="500" y="591" class="text-sub">Responsive Breakpoints (1100px, 850px, 560px) • High Contrast • Reduced Motion Support • Keyboard Navigation</text>
+</svg>
